@@ -1,0 +1,40 @@
+{
+  "name": "storybook-siouplait",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://github.com/siouplait/storybook",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "css-loader": "^0.28.11",
+    "image-webpack-loader": "^4.3.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "style-loader": "^0.21.0"
+  },
+  "scripts": {
+    "lint": "eslint ./stories",
+    "fix": "eslint ./stories --fix",
+    "storybook": "start-storybook -p 9009 -s ./",
+    "build-storybook": "build-storybook -s ./stories .out",
+    "predeploy": "npm run build",
+    "deploy": "story-base -d build",
+    "deploy-storybook": "storybook-to-ghpages"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.7",
+    "@storybook/addon-links": "^3.4.7",
+    "@storybook/addon-notes": "^3.4.7",
+    "@storybook/addon-storysource": "^3.4.7",
+    "@storybook/addon-viewport": "^3.4.7",
+    "@storybook/react": "^3.4.7",
+    "@storybook/storybook-deployer": "^2.3.0",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "gh-pages": "^1.2.0"
+  }
+}
