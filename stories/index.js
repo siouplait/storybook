@@ -28,6 +28,7 @@ import btnRemove from '../src/icon/btn_remove.svg'
 import logoMain from '../src/icon/logo_main2.png'
 import logoQr from '../src/icon/logo_qr.png'
 import logoNfcn from '../src/icon/logo_nfcn.png'
+import logoSioup from '../src/icon/logo_sioup.png'
 
 // welcome
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />)
