@@ -1,11 +1,12 @@
 import React from 'react'
 import './Link.css'
 
-// className = { props.block === }
-const Link = ({ logo, block, children, ...rest }) =>
-  <div className={block ? 's-link-block-white' : ''} {...rest}>
-    <a className="s-link-highlighted" >{children}</a>
-    {logo ? <img className="s-link-img-resize" src={logo} alt="logo link" /> : ''}
+const Link = ({ action, logo, block, text, children, ...rest }) =>
+  <div className={block ? 's-link-block-border' : 's-link-block'} {...rest}>
+    <a onClick={action} className="s-link-highlighted" >{text || children}</a>
+    {logo ?<img className={block ? "s-link-img-resize-block" :
+     "s-link-img-resize-no-block"}
+     src={logo} alt="logo link" /> : ''}
   </div>
 
 export default Link

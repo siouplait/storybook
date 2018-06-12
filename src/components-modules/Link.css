@@ -5,7 +5,7 @@
   cursor: pointer;
 }
 
-.s-link-block-white {
+.s-link-block-border {
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -15,9 +15,25 @@
   border: 1px solid silver;
 }
 
-img.s-link-img-resize {
+.s-link-block {
+  text-align: center;
+  position: fixed;
+  line-height: 1.5em;
+  width: 100%;
+  background-color: white;
+}
+
+img.s-link-img-resize-block {
   position: fixed;
   margin: 0.5em 0 0 0.5em;
   width: 1.7em;
   height: 9vh;
+}
+
+img.s-link-img-resize-no-block {
+  padding: 0;
+  position: fixed;
+  margin: 0.2em 0 0 0.3em;
+  width: 1.7em;
+  height: 4vh;
 }

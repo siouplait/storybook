@@ -14,10 +14,10 @@ import '../src/class-generic.css'
 // components
 import Button from '../src/components-modules/Button'
 import Input from '../src/components-modules/Input'
+import InputLogo from '../src/components-modules/InputLogo'
 import Link from '../src/components-modules/Link'
 import Nav from '../src/components-modules/Nav'
 import PageTemplate from '../src/components-modules/PageTemplate'
-import Spotsblock from '../src/components-modules/Spotsblock'
 
 // icon/logo
 import btnBurger from '../src/icon/btn_burger.svg'
@@ -28,44 +28,63 @@ import btnRemove from '../src/icon/btn_remove.svg'
 import logoMain from '../src/icon/logo_main2.png'
 import logoQr from '../src/icon/logo_qr.png'
 import logoNfcn from '../src/icon/logo_nfcn.png'
-import logoHeart from '../src/icon/logo_heart.svg'
 
 // welcome
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />)
 
 // BUTTON stories
 storiesOf('Button', module)
-  .add('Btn principal', () =>
-    <Button text="Hello button" />)
+  .add('Btn principal', withNotes('Simple link use class (s-btn)')(() =>
+    <Button className="s-btn" onClick={action('clicked')}>
+    Hello Button
+    </Button>))
 
   .add('Btn facebook', () =>
-    <Button text="Facebook Connect" className="s-facebook" />)
+    <Button className="s-btn s-facebook" onClick={action('clicked')}>
+      Facebook Connect
+    </Button>)
 
   .add('Btn black', () =>
-    <Button text="PASSER COMMANDE" className="s-black" />)
+    <Button className="s-btn s-black" onClick={action('clicked')}>
+      PASSER COMMANDE
+    </Button>)
 
   .add('Btn burger', () =>
-    <Button icon={btnBurger} imgHeight="10" />)
+    <Button className="s-btn-icon" onClick={action('clicked')}>
+      <img src={btnBurger} alt="button burger 50 x 50" height="50px"
+        width="50px"/>
+    </Button>)
 
   .add('Btn back', () =>
-    <Button icon={btnBack} imgHeight="7" />)
+    <Button className="s-btn-icon" onClick={action('clicked')}>
+      <img src={btnBack} alt="button back 60 x 60" height="60px"
+        width="60px"/>
+    </Button>)
 
   .add('Btn black share', () =>
-    <Button 
-    text="PARTAGER"
-    icon={btnBack}
-    imgHeight = "7"
-    classIcon="s-icon-symetric"
-    className="s-black" />)
+    <Button className="s-btn s-black" onClick={action('clicked')}>
+      PARTAGER
+      <img className="s-icon-symetric" src={btnBack} alt="button share 30 x 30" height="30px"
+        width="30px" />
+    </Button>)
 
   .add('Btn search', () =>
-    <Button icon={btnSearch} imgHeight="7" />)
+    <Button className="s-btn-icon" onClick={action('clicked')}>
+      <img src={btnSearch} alt="button search 30 x 30" height="30px"
+        width="30px" />
+    </Button>)
 
   .add('Btn adding', () =>
-    <Button icon={btnAdding} imgHeight="7"/>)
+    <Button className="s-btn-icon" onClick={action('clicked')}>
+      <img src={btnAdding} alt="button adding 30 x 30" height="30px"
+        width="30px" />
+    </Button>)
 
   .add('Btn remove', () =>
-    <Button icon={btnRemove} imgHeight="7" />)
+    <Button className="s-btn-icon" onClick={action('clicked')}>
+      <img src={btnRemove} alt="button remove 30 x 30" height="30px"
+        width="30px" />
+    </Button>)
 
 // INPUT stories
 storiesOf('Input', module)
@@ -73,25 +92,23 @@ storiesOf('Input', module)
     <Input className="s-input" placeholder="Standard input" />)
 
   .add('Input search', () =>
-    <Input
-      icon={btnSearch}
-      imgHeight="5.5"
-      className="s-input"
-      placeholder="Standard input" 
-    />)
-    // <InputLogo className="s-block-input-logo" >
-    //   <Input className="s-input" placeholder="Search input" />
-    //   <Button icon={btnSearch} imgHeight="5.5" />
-    // </InputLogo>)
+    <InputLogo className="s-block-input-logo" >
+      <Input className="s-input" placeholder="Search input" />
+      <Button className="s-btn-icon" onClick={action('clicked')}>
+        <img src={btnSearch} alt="button burger 30 x 30" height="30px"
+          width="30px" />
+      </Button>
+    </InputLogo>)
 
 // LINK stories
 storiesOf('Link', module)
   .add('link highlighted', () =>
-    <Link>Commander sans <br/> compte</Link>)
-  .add('link highlighted with icon', () =>
-    <Link text="MES SPOTS" logo={logoHeart} />)
+    <Link>Commander sans compte</Link>)
+
   .add('link highlighted with white block', () =>
-    <Link text="Commander sans compte" block logo={btnSearch} />)
+    <Link block={true} logo={btnSearch}>
+      Commander sans compte
+    </Link>)
 
 // NAVBAR stories
 storiesOf('Nav', module)
@@ -110,16 +127,22 @@ storiesOf('Page', module)
     <PageTemplate className="s-bg-orange s-justify-content-center">
       <img className="s-mb-3" src={logoMain} alt="button burger 140 x 140" height="170"
         width="170" />
-      <Button text="PASSER COMMANDE" className="s-black" />
+      <Button className="s-btn s-black s-fixed-b s-mb-4" onClick={action('clicked')}>
+        PASSER COMMANDE
+      </Button>
     </PageTemplate>
   )
   .add('Page 2', () =>
     <PageTemplate className="s-bg-orange">
-      <img className="s-mt-4" src={logoMain} alt="logo principal" height="100"
+      <img className="s-mt-4" src={logoMain} alt="button burger 140 x 140" height="100"
         width="100" />
-      <Button text="Facebook Connect" className="s-facebook s-mt-1" />
-      <Button text="S'inscrire" className="s-btn s-mt-1" />
-      <Link text="Commander sans \n compte" className="s-fixed-b s-mb-2" />
+      <Button className="s-btn s-facebook s-mt-1" onClick={action('clicked')}>
+        Facebook Connect
+      </Button>
+      <Button className="s-btn s-mt-1" onClick={action('clicked')}>
+        S'inscrire
+      </Button>
+      <Link className="s-fixed-b s-mb-2">Commander sans<br/> compte</Link>
     </PageTemplate>
   )
   .add('Page 3', () =>
@@ -155,41 +178,6 @@ storiesOf('Page', module)
           <img src={btnBack} alt="button back 60 x 60" height="60px"
             width="60px" />
         </Button>
-      </div>
-    </PageTemplate>
-  )
-  .add('Page 5', () =>
-    <PageTemplate className="s-bg-white">
-      <Nav className="s-nav-menu s-nav-noback" />
-
-    </PageTemplate>
-  )
-  .add('Page Menu card', () =>
-    <PageTemplate className="s-bg-white">
-      <Nav className="s-nav-menu" />
-      <div style={{ marginTop: '4em' }}>
-        <h1>NOM DU SPOT</h1>
-        <p>CATEGORY NAME</p>
-      </div>
-      <InputLogo className="s-block-input-logo" style={{ marginTop: '1em' }}>
-        <Input className="s-input" placeholder="Search" />
-        <Button className="s-btn-icon" onClick={action('clicked')}>
-          <img src={btnSearch} alt="button burger 30 x 30" height="20px" width="20px" />
-        </Button>
-      </InputLogo>
-      <div>
-        <Spotsblock src="http://via.placeholder.com/350x150">
-          Name item Name item Name item PRIX
-                </Spotsblock>
-        <Spotsblock src="http://via.placeholder.com/350x150">
-          Name item Name item Name item PRIX
-                </Spotsblock>
-        <Spotsblock src="http://via.placeholder.com/350x150">
-          Name item Name item Name item PRIX
-                </Spotsblock>
-        <Spotsblock src="http://via.placeholder.com/350x150">
-          Name item Name item Name item PRIX
-                </Spotsblock>
       </div>
     </PageTemplate>
   )

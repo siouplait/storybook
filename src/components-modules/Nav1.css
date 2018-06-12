@@ -5,11 +5,11 @@
 
 .s-nav-menu {
   background-color: #FFB72D;
-  text-align: center;
-  line-height: 3em;
-  position: fixed;
-  width: 100%;
-  top: 0;
+  display: flex;
+  padding: 2vh;
+  height: 12vh;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .s-nav-menu > h1 {
@@ -18,21 +18,15 @@
 }
 
 .s-nav-menu > button:first-child, .s-btn-burger {
-  position: fixed;
-  left: 0;
-  margin-left: 5px;
-  /* margin-top: 2vh; */
+  justify-content: space-between;
 }
 
 .s-nav-menu > button + button {
-  position: fixed;
-  right: 0;
-  margin-right: 7px;
-  /* margin-top: 1.8vh; */
+
 }
 
-.s-nav-noback > button + button {
-  display: none;
+.s-nav-noback > button:last-child {
+  visibility: hidden;
 }
 
 .s-no-title {
