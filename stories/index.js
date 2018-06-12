@@ -83,8 +83,10 @@ storiesOf('Input', module)
 storiesOf('Link', module)
   .add('link highlighted', () =>
     <Link>Commander sans <br/> compte</Link>)
+
   .add('link highlighted with icon', () =>
     <Link text="MES SPOTS" logo={logoHeart} imgHeight="4.5"/>)
+
   .add('link highlighted with white block', () =>
     <Link text="Commander sans compte" block logo={btnSearch} imgHeight="5" />)
 
@@ -102,10 +104,14 @@ storiesOf('Nav', module)
 // PAGE stories
 storiesOf('Page', module)
   .add('Page 1', () =>
-    <PageTemplate className="s-bg-orange s-justify-content-center">
-      <img className="s-mb-3" src={logoMain} alt="button burger 140 x 140" height="170"
-        width="170" />
-      <Button text="PASSER COMMANDE" className="s-black" />
+    <PageTemplate className="s-bg-orange">
+      <img 
+        className="s-mt-5"
+        src={logoMain}
+        alt="button burger"
+        style={{ height: 14 + 'em'}}
+      />
+      <Button text="PASSER COMMANDE" className="s-mt-4 s-black" />
     </PageTemplate>
   )
   .add('Page 2', () =>
