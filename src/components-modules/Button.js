@@ -7,8 +7,8 @@ const Button = ({ action, imgHeight, classIcon, icon, text, children, className 
     {
       icon ? <img 
       src={icon} 
-        style={{ height: imgHeight + "vh"}} 
-      className={classIcon ? `${classIcon} s-btn-img-resize` : "s-btn-img-resize"} 
+      style={{ height: imgHeight + "vh"}} 
+      className={classIcon ? classIcon : ""} 
       alt="icon" /> : ''
     }
   </button>

@@ -4,7 +4,7 @@ import Button from '../components-modules/Button'
 import btnBurger from '../icon/btn_burger.svg'
 import btnBack from '../icon/btn_back.svg'
 import './Button.css'
-import './Nav1.css'
+import './Nav.css'
 
 const Nav = ({ children, ...rest }) =>
   <div {...rest}>

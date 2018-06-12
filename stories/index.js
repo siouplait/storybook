@@ -70,28 +70,23 @@ storiesOf('Button', module)
 // INPUT stories
 storiesOf('Input', module)
   .add('Input standard', () =>
-    <Input className="s-input" placeholder="Standard input" />)
+    <Input placeholder="Standard input" />)
 
   .add('Input search', () =>
     <Input
       icon={btnSearch}
       imgHeight="5.5"
-      className="s-input"
       placeholder="Standard input" 
     />)
-    // <InputLogo className="s-block-input-logo" >
-    //   <Input className="s-input" placeholder="Search input" />
-    //   <Button icon={btnSearch} imgHeight="5.5" />
-    // </InputLogo>)
 
 // LINK stories
 storiesOf('Link', module)
   .add('link highlighted', () =>
     <Link>Commander sans <br/> compte</Link>)
   .add('link highlighted with icon', () =>
-    <Link text="MES SPOTS" logo={logoHeart} />)
+    <Link text="MES SPOTS" logo={logoHeart} imgHeight="4.5"/>)
   .add('link highlighted with white block', () =>
-    <Link text="Commander sans compte" block logo={btnSearch} />)
+    <Link text="Commander sans compte" block logo={btnSearch} imgHeight="5" />)
 
 // NAVBAR stories
 storiesOf('Nav', module)
