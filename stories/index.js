@@ -116,11 +116,15 @@ storiesOf('Page', module)
   )
   .add('Page 2', () =>
     <PageTemplate className="s-bg-orange">
-      <img className="s-mt-4" src={logoMain} alt="logo principal" height="100"
-        width="100" />
-      <Button text="Facebook Connect" className="s-facebook s-mt-1" />
-      <Button text="S'inscrire" className="s-btn s-mt-1" />
-      <Link text="Commander sans \n compte" className="s-fixed-b s-mb-2" />
+      <img 
+        className="s-mt-2" 
+        src={logoMain} 
+        alt="logo principal"
+        style={{ height: 8 + 'em' }}
+      />
+      <Button text="Facebook Connect" className="s-mt-2 s-facebook" />
+      <Button text="S'inscrire" className="s-mt-2" />
+      <Link text="Commander sans \n compte" className="s-mt-2" />
     </PageTemplate>
   )
   .add('Page 3', () =>
@@ -143,7 +147,7 @@ storiesOf('Page', module)
   )
   .add('Page 4', () =>
     <PageTemplate className="s-bg-orange">
-      <Nav className="s-nav-menu s-nav-noback"/>
+      <Nav full className="s-nav-menu s-nav-noback"/>
       <div className="s-fixed-b">
         <img className="" src={logoNfcn} alt="logo QR" height="80" width="80" />
         <p className="s-px-2">
