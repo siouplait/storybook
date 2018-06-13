@@ -9,9 +9,9 @@ import './Nav.css'
 const Nav = ({ actionBurger, actionBack, children, ...rest }) =>
   <div {...rest}>
     {children}
-    <Button action={actionBurger} icon={btnBurger} imgHeight="6" />
+    <Button action={actionBurger} icon={btnBurger} iconHeight="6" />
     <h1>Siouplaît!</h1>
-    <Button action={actionBack} icon={btnBack} imgHeight="6" />
+    <Button action={actionBack} icon={btnBack} iconHeight="6" />
   </div>
 
 export default Nav

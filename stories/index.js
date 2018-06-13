@@ -4,7 +4,6 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 import { Welcome } from '@storybook/react/demo'
-import { withNotes } from '@storybook/addon-notes'
 
 // css
 import './stories.css'
@@ -17,7 +16,9 @@ import Input from '../src/components-modules/Input'
 import Link from '../src/components-modules/Link'
 import Nav from '../src/components-modules/Nav'
 import PageTemplate from '../src/components-modules/PageTemplate'
-import Spotsblock from '../src/components-modules/Spotsblock'
+import Itemblock from '../src/components-modules/Itemblock'
+import Headertext from '../src/components-modules/Headertext'
+
 
 // icon/logo
 import btnBurger from '../src/icon/btn_burger.svg'
@@ -45,27 +46,30 @@ storiesOf('Button', module)
     <Button text="PASSER COMMANDE" className="s-black" />)
 
   .add('Btn burger', () =>
-    <Button icon={btnBurger} imgHeight="10" />)
+    <Button icon={btnBurger} iconHeight="10" />)
 
   .add('Btn back', () =>
-    <Button icon={btnBack} imgHeight="7" />)
+    <Button icon={btnBack} iconHeight="7" />)
 
   .add('Btn black share', () =>
     <Button 
     text="PARTAGER"
     icon={btnBack}
-    imgHeight = "7"
+    iconHeight = "7"
     classIcon="s-icon-symetric"
     className="s-black" />)
 
   .add('Btn search', () =>
-    <Button icon={btnSearch} imgHeight="7" />)
+    <Button icon={btnSearch} iconHeight="7" />)
 
   .add('Btn adding', () =>
-    <Button icon={btnAdding} imgHeight="7"/>)
+    <Button icon={btnAdding} iconHeight="7"/>)
 
   .add('Btn remove', () =>
-    <Button icon={btnRemove} imgHeight="7" />)
+    <Button icon={btnRemove} iconHeight="7" />)
+  
+  .add('Btn and logo', () =>
+    <Button text="salut" logo={logoMain} logoHeight="25" />)
 
 // INPUT stories
 storiesOf('Input', module)
@@ -75,7 +79,7 @@ storiesOf('Input', module)
   .add('Input search', () =>
     <Input
       icon={btnSearch}
-      imgHeight="5.5"
+      iconHeight="5"
       placeholder="Standard input" 
     />)
 
@@ -111,7 +115,7 @@ storiesOf('Page', module)
         alt="button burger"
         style={{ height: 14 + 'em'}}
       />
-      <Button text="PASSER COMMANDE" className="s-mt-4 s-black" />
+      <Button text="PASSER COMMANDE" position="s-mt-4" className="s-black" />
     </PageTemplate>
   )
   .add('Page 2', () =>
@@ -122,79 +126,71 @@ storiesOf('Page', module)
         alt="logo principal"
         style={{ height: 8 + 'em' }}
       />
-      <Button text="Facebook Connect" className="s-mt-2 s-facebook" />
-      <Button text="S'inscrire" className="s-mt-2" />
-      <Link text="Commander sans \n compte" className="s-mt-2" />
+      <Button text="Facebook Connect" position="s-mt-2" className="s-facebook" />
+      <Button text="S'inscrire" position="s-mt-2" />
+      <Link className="s-fixed-b s-mb-3">
+        Commander sans<br/> compte
+      </Link>
     </PageTemplate>
   )
   .add('Page 3', () =>
     <PageTemplate className="s-bg-orange">
-      <Nav className="s-nav-menu s-nav-noback s-no-title" />
-      <img className="s-mt-1" src={logoMain} alt="logo 100 x 100" height="100"
-        width="100" />
-      <img className="s-mt-1" src={logoQr} alt="logo QR" height="80" width="90"/>
-      <Button className="s-btn s-mt-05" onClick={action('clicked')}>
-        Scanner le QR Code
-      </Button>
-      <img className="s-mt-2" src={logoNfcn} alt="logo QR" height="80" width="90" />
-      <Button className="s-btn" onClick={action('clicked')}>
-        Androïd : NFC
-      </Button>
-      <Link block logo={btnSearch}>
-        Rechercher un spot
-      </Link>
+      <Nav full className="s-nav-menu s-nav-noback s-no-title" />
+      <img className="s-fixed-t s-mt-1 s-mb-2" src={logoMain} alt="logo" style={{ height: "23vh" }} />
+      <Button style={{ marginTop: "7em" }} text="Scanner le QR Code" logo={logoQr} logoHeight="15" />
+      <Button style={{ marginTop: "1em" }} text="Androïd : NFC" logo={logoNfcn} logoHeight="15" />
+      <Link full block className="s-mt-2" text="Commander sans compte" logo={btnSearch} imgHeight="5" />
     </PageTemplate>
   )
   .add('Page 4', () =>
     <PageTemplate className="s-bg-orange">
       <Nav full className="s-nav-menu s-nav-noback"/>
-      <div className="s-fixed-b">
-        <img className="" src={logoNfcn} alt="logo QR" height="80" width="80" />
-        <p className="s-px-2">
-          Posez votre <span className="s-bold-light">téléphone</span> sur les <span className="s-bold-light">jolis ronds connectés</span>,
-          et découvrez directement le <span className="s-bold-light">menu du spot où vous êtes</span>
-        </p>
-        <p><img src={logoMain} alt="logo 100 x 100" height="75"
-          width="75" /></p>
-        <Button className="s-btn-icon s-my-2" onClick={action('clicked')}>
-          <img src={btnBack} alt="button back 60 x 60" height="60px"
-            width="60px" />
-        </Button>
-      </div>
+      <img className="s-mt-4" src={logoNfcn} alt="logo QR" style={{ height: "14vh" }} />
+      <p className="s-px-2">
+        Posez votre <span className="s-text-bold">téléphone</span> sur les <span className="s-text-bold">jolis ronds connectés</span>,
+        et découvrez directement le <span className="s-text-bold">menu du spot où vous êtes</span>
+      </p>
+      <p><img src={logoMain} alt="logo" style={{ height: "20vh" }} /></p>
+      <Button className="s-my-2" icon={btnBack} iconHeight="14" />
     </PageTemplate>
   )
   .add('Page 5', () =>
     <PageTemplate className="s-bg-white">
-      <Nav className="s-nav-menu s-nav-noback" />
-
+      <Nav full className="s-nav-menu s-nav-noback" />
+      <p>salut</p>
     </PageTemplate>
   )
   .add('Page Menu card', () =>
     <PageTemplate className="s-bg-white">
-      <Nav className="s-nav-menu" />
-      <div style={{ marginTop: '4em' }}>
-        <h1>NOM DU SPOT</h1>
-        <p>CATEGORY NAME</p>
-      </div>
-      <InputLogo className="s-block-input-logo" style={{ marginTop: '1em' }}>
-        <Input className="s-input" placeholder="Search" />
-        <Button className="s-btn-icon" onClick={action('clicked')}>
-          <img src={btnSearch} alt="button burger 30 x 30" height="20px" width="20px" />
-        </Button>
-      </InputLogo>
-      <div>
-        <Spotsblock src="http://via.placeholder.com/350x150">
+      <Nav full className="s-nav-menu" />
+      <Headertext title="NOM DU SITE" subtitle="CATEGORY NAME"/>
+      <Input
+        icon={btnSearch}
+        iconHeight="5"
+        placeholder="Standard input"
+      />
+
+      <div full className="s-d-flex" style={{backgroundColor: "aqua"}}>
+
+        <Itemblock src="http://via.placeholder.com/350x150">
           Name item Name item Name item PRIX
-                </Spotsblock>
-        <Spotsblock src="http://via.placeholder.com/350x150">
+        </Itemblock>
+        <Itemblock src="http://via.placeholder.com/350x150">
           Name item Name item Name item PRIX
-                </Spotsblock>
-        <Spotsblock src="http://via.placeholder.com/350x150">
+        </Itemblock>
+        <Itemblock src="http://via.placeholder.com/350x150">
           Name item Name item Name item PRIX
-                </Spotsblock>
-        <Spotsblock src="http://via.placeholder.com/350x150">
+        </Itemblock>
+        <Itemblock src="http://via.placeholder.com/350x150">
           Name item Name item Name item PRIX
-                </Spotsblock>
+        </Itemblock>
+        <Itemblock src="http://via.placeholder.com/350x150">
+          Name item Name item Name item PRIX
+        </Itemblock>
+        <Itemblock src="http://via.placeholder.com/350x150">
+          Name item Name item Name item PRIX
+        </Itemblock>
+       
       </div>
     </PageTemplate>
   )

@@ -3,7 +3,7 @@
   src: url('../font/file.woff');
 }
 
-.s-nav-menu {
+div.s-nav-menu {
   background-color: #FFB72D;
   display: flex;
   height: 9vh;
@@ -13,27 +13,27 @@
   align-items: center;
 }
 
-.s-nav-menu > h1 {
+div.s-nav-menu > h1 {
   font-family: "Ma Super Fonte";
   font-size: 6vh;
 }
 
-.s-nav-menu > button:first-child, .s-btn-burger {
+div.s-nav-menu > div:first-child > button, div.s-btn-burger {
   margin-left: 5px;
 }
 
-.s-nav-menu > button:last-child {
+div.s-nav-menu > div:last-child > button {
   margin-right: 5px;
 }
 
-.s-nav-noback > button:last-child {
+div.s-nav-noback > div:last-child > button {
   visibility: hidden;
 }
 
-.s-no-title {
+div.s-no-title {
   background-color: transparent;
 }
 
-.s-no-title > h1 {
+div.s-no-title > h1 {
   display: none;
 }

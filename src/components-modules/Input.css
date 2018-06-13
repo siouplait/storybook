@@ -1,21 +1,20 @@
 div.s-block-input-logo {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid #000;
-    border-radius: 5px;
-    text-align: center;
-    width: 25em;
+    position: relative;
+    width: 18em;
+}
+
+div.s-block-input-logo button {
+    position: absolute;
+    right: 0;
+    top: 5px;
 }
 
 input.s-input {
-    border: none;
-    margin: 1px;
-    line-height: 2em;
-    width: inherit;
-    font-size: 1.2em;
+    height: 2.1em;
+    width: 15em;
+    padding: 0 2.5em 0 1em;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 1em;
     text-align: center;
-}
-
-.s-block-input-logo button {
-    margin: 0 4px;
 }

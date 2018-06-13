@@ -1,6 +1,7 @@
 html,
 body {
-	height: 100%;
+  height: 100%;
+  margin: 0;
 }
 
 .s-bg-orange {
@@ -22,6 +23,17 @@ body {
 .s-box {
   text-align: center;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
+
+span.s-text-bold {
+  font-weight: 500;
+}
+
+/* @media screen and (orientation: landscape) {
+
+}
+
+@media screen and (orientation: portrait) {
+
+} */
