@@ -4,23 +4,31 @@ body {
   margin: 0;
 }
 
-.s-bg-orange {
+div.s-main-block {
+  height: 100vh;
+  min-height: 100%;
+}
+
+div.s-bg-orange {
   background-color: #FFB72D;
-	height: 100vh;
-  min-height: 100%;
-	display: flex;
-	flex-direction: column;
 }
 
-.s-bg-white {
+div.s-bg-white {
   background-color: white;
-	height: 100vh;
-  min-height: 100%;
-	display: flex;
-	flex-direction: column;
 }
 
-.s-box {
+div.s-content-main {
+  display: flex;
+  justify-content: center;
+}
+
+div.s-content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.s-box {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -30,10 +38,21 @@ span.s-text-bold {
   font-weight: 500;
 }
 
-/* @media screen and (orientation: landscape) {
-
+@media screen and (orientation: landscape) {
+  * {
+    font-size: 2.5vw;
+  }
+  .s-block-landscape {
+    display: flex;
+  }
+  .s-block-landscape * {
+    margin: 0 1em;
+    display: flex;
+  }
 }
 
 @media screen and (orientation: portrait) {
-
-} */
+  * {
+    font-size: 3vh;
+  }
+}

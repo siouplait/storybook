@@ -6,6 +6,7 @@ div.s-link-block-border {
   line-height: 4em;
   background-color: white;
   border: 1px solid silver;
+  width: 100%;
 }
 
 div.s-link-block {

@@ -1,24 +1,17 @@
 div.thumbnail {
-    margin: 0 0.5em;
-    width: 10em;
-    max-width: 10em;
+    margin: 0.2em 0.1em;
+    width: 30vw;
 }
 
 img.img-thumbnail {
     border: 1px solid #ddd;
-    padding: 5px;
-    width: 100%;
-    height: 14em;
+    padding: 2px;
+    margin: 0;
 }
 
 p.detail-thumbnail{
-    margin: 1px;
-    padding: 5px;
     text-align: center;
     border: 1px solid #ddd;
-    width: 100%;
-}
-
-img.img-thumbnail img:hover {
-    box-shadow: 0 0 2px 1px rgba(255, 183, 45, 0.7);
+    padding: 1px;
+    margin: 0;
 }

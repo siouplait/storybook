@@ -6,7 +6,7 @@
 div.s-nav-menu {
   background-color: #FFB72D;
   display: flex;
-  height: 9vh;
+  line-height: 0;
   padding: 0;
   margin: 0;
   justify-content: space-between;
@@ -15,10 +15,10 @@ div.s-nav-menu {
 
 div.s-nav-menu > h1 {
   font-family: "Ma Super Fonte";
-  font-size: 6vh;
 }
 
 div.s-nav-menu > div:first-child > button, div.s-btn-burger {
+  /* margin-top: 5px; */
   margin-left: 5px;
 }
 
@@ -31,9 +31,21 @@ div.s-nav-noback > div:last-child > button {
 }
 
 div.s-no-title {
-  background-color: transparent;
+  background-color: #FFB72D;
 }
 
 div.s-no-title > h1 {
   display: none;
+}
+
+@media screen and (orientation: landscape) {
+  div.s-nav-menu > h1 {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  div.s-nav-menu > h1 {
+    font-size: 5vh;
+  }
 }

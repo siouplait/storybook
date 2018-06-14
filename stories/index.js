@@ -109,55 +109,73 @@ storiesOf('Nav', module)
 storiesOf('Page', module)
   .add('Page 1', () =>
     <PageTemplate className="s-bg-orange">
-      <img 
-        className="s-mt-5"
+      <img
+        className="s-mt-3"
         src={logoMain}
         alt="button burger"
-        style={{ height: 14 + 'em'}}
+        style={{ height: '12em' }}
       />
-      <Button text="PASSER COMMANDE" position="s-mt-4" className="s-black" />
+      <Button text="PASSER COMMANDE" position="s-mt-3" className="s-black" />
     </PageTemplate>
   )
   .add('Page 2', () =>
     <PageTemplate className="s-bg-orange">
       <img 
-        className="s-mt-2" 
+        className="s-mb-3 s-mt-2"
         src={logoMain} 
         alt="logo principal"
         style={{ height: 8 + 'em' }}
       />
-      <Button text="Facebook Connect" position="s-mt-2" className="s-facebook" />
-      <Button text="S'inscrire" position="s-mt-2" />
-      <Link className="s-fixed-b s-mb-3">
+      <div className="s-block-landscape s-mb-4">
+        <Button text="Facebook Connect" position="s-mb-2" className="s-facebook" />
+        <Button text="S'inscrire" position="" />
+      </div>
+      <Link className="s-fixed-b s-mb-1">
         Commander sans<br/> compte
       </Link>
     </PageTemplate>
   )
   .add('Page 3', () =>
-    <PageTemplate className="s-bg-orange">
-      <Nav full className="s-nav-menu s-nav-noback s-no-title" />
-      <img className="s-fixed-t s-mt-1 s-mb-2" src={logoMain} alt="logo" style={{ height: "23vh" }} />
-      <Button style={{ marginTop: "7em" }} text="Scanner le QR Code" logo={logoQr} logoHeight="15" />
-      <Button style={{ marginTop: "1em" }} text="Androïd : NFC" logo={logoNfcn} logoHeight="15" />
-      <Link full block className="s-mt-2" text="Commander sans compte" logo={btnSearch} imgHeight="5" />
+    <PageTemplate nav="s-nav-noback s-no-title" className="s-bg-orange">
+      <img 
+        className="s-fixed-t s-mt-1"
+        src={logoMain}
+        alt="logo"
+        style={{ height: "7em" }}
+      />
+      <div className="s-block-landscape s-mt-5 s-mb-3" >
+        <Button position="s-mt-3" text="Scanner le QR Code" logo={logoQr} logoHeight="15" />
+        <Button text="Androïd : NFC" logo={logoNfcn} logoHeight="15" />
+      </div>
+      <Link block className="s-fixed-b" text="Commander sans compte" logo={btnSearch} imgHeight="5" />
     </PageTemplate>
   )
   .add('Page 4', () =>
-    <PageTemplate className="s-bg-orange">
-      <Nav full className="s-nav-menu s-nav-noback"/>
-      <img className="s-mt-4" src={logoNfcn} alt="logo QR" style={{ height: "14vh" }} />
+    <PageTemplate nav className="s-bg-orange">
+      <img
+        className="s-mt-3"
+        src={logoNfcn}
+        alt="logo QR"
+        style={{ height: "5em" }}
+      />
       <p className="s-px-2">
         Posez votre <span className="s-text-bold">téléphone</span> sur les <span className="s-text-bold">jolis ronds connectés</span>,
         et découvrez directement le <span className="s-text-bold">menu du spot où vous êtes</span>
       </p>
-      <p><img src={logoMain} alt="logo" style={{ height: "20vh" }} /></p>
-      <Button className="s-my-2" icon={btnBack} iconHeight="14" />
+      <div className="s-block-landscape s-mt-3">
+        <img
+          src={logoMain}
+          alt="logo"
+          style={{ height: "4em" }}
+        />
+        <Button icon={btnBack} iconHeight="4" />
+      </div>
     </PageTemplate>
   )
   .add('Page 5', () =>
-    <PageTemplate className="s-bg-white">
-      <Nav full className="s-nav-menu s-nav-noback" />
-      <p>salut</p>
+    <PageTemplate nav className="s-bg-white">
+      <p>Template test</p>
+      <p>test</p>
     </PageTemplate>
   )
   .add('Page Menu card', () =>
@@ -166,28 +184,40 @@ storiesOf('Page', module)
       <Headertext title="NOM DU SITE" subtitle="CATEGORY NAME"/>
       <Input
         icon={btnSearch}
-        iconHeight="5"
-        placeholder="Standard input"
+        iconHeight="1.3"
+        placeholder="Search"
       />
 
-      <div full className="s-d-flex" style={{backgroundColor: "aqua"}}>
+      <div className="s-mt-1 s-d-flex">
 
-        <Itemblock src="http://via.placeholder.com/350x150">
+        <Itemblock src="http://via.placeholder.com/150x150">
           Name item Name item Name item PRIX
         </Itemblock>
-        <Itemblock src="http://via.placeholder.com/350x150">
+        <Itemblock src="http://via.placeholder.com/150x150">
           Name item Name item Name item PRIX
         </Itemblock>
-        <Itemblock src="http://via.placeholder.com/350x150">
+        <Itemblock src="http://via.placeholder.com/150x150">
           Name item Name item Name item PRIX
         </Itemblock>
-        <Itemblock src="http://via.placeholder.com/350x150">
+        <Itemblock src="http://via.placeholder.com/150x150">
           Name item Name item Name item PRIX
         </Itemblock>
-        <Itemblock src="http://via.placeholder.com/350x150">
+        <Itemblock src="http://via.placeholder.com/150x150">
           Name item Name item Name item PRIX
         </Itemblock>
-        <Itemblock src="http://via.placeholder.com/350x150">
+        <Itemblock src="http://via.placeholder.com/150x150">
+          Name item Name item Name item PRIX
+        </Itemblock>
+        <Itemblock src="http://via.placeholder.com/150x150">
+          Name item Name item Name item PRIX
+        </Itemblock>
+        <Itemblock src="http://via.placeholder.com/150x150">
+          Name item Name item Name item PRIX
+        </Itemblock>
+        <Itemblock src="http://via.placeholder.com/150x150">
+          Name item Name item Name item PRIX
+        </Itemblock>
+        <Itemblock src="http://via.placeholder.com/150x150">
           Name item Name item Name item PRIX
         </Itemblock>
        

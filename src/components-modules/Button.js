@@ -9,7 +9,7 @@ const Button = ({ position, style, action, iconHeight, logoHeight, classIcon, ic
       {
         icon ? <img
           src={icon}
-          style={{ height: iconHeight + "vh" }}
+          style={{ height: iconHeight + "em" }}
           className={classIcon ? classIcon : ""}
           alt="icon" /> : ''
       }
