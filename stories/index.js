@@ -26,10 +26,11 @@ import btnBack from '../src/icon/btn_back.svg'
 import btnSearch from '../src/icon/btn_search.svg'
 import btnAdding from '../src/icon/btn_adding.svg'
 import btnRemove from '../src/icon/btn_remove.svg'
+import logoHeart from '../src/icon/logo_heart.svg'
 import logoMain from '../src/icon/logo_main2.png'
 import logoQr from '../src/icon/logo_qr.png'
 import logoNfcn from '../src/icon/logo_nfcn.png'
-import logoHeart from '../src/icon/logo_heart.svg'
+import logoSioup from '../src/icon/logo_sioup.png'
 
 // welcome
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />)
@@ -224,5 +225,22 @@ storiesOf('Page', module)
       </div>
     </PageTemplate>
   )
+  .add('Logout Page', () =>
+    <PageTemplate className="s-bg-orange">
+      <h1 className=" merci s-mt-1 s-mb-0"> #EtMerci! </h1>
+      <p className="s-mt-0 s-ml-05 s-mr-05"> Le "Name of the place" prépare votre commande.
+        <br/>Vous recevrez une notification quand celle-ci sera prête.
+      </p>
+      <img src={logoMain} alt="button burger 140 x 140" height="150"
+        width="150" />
+      <Button className="s-btn s-black s-mt-1" onClick={action('clicked')}>
+        PARTAGER <img className="s-icon-symetric" src={btnBack} alt="button share 30 x 30" height="30px"
+        width="30px" />
+      </Button>
+      <img style={{ transform: 'rotate(-11deg)'}} src={logoSioup} alt="button burger 140 x 140" className="s-mt-2" height='50' />
+      <p className="s-mt-2 s-ml-05 s-mr-05"> MAIS C'EST NOUS QUI VOUS REMERCIONS </p>
+    </PageTemplate>
+  )
+
 
 export default Button
