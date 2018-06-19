@@ -1,0 +1,23 @@
+.menuGalleryContainer {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  overflow: hidden;
+  /* border: 1px solid #aaa; */
+}
+
+.cards {
+  /* align-items: center; */
+  /* align-self: center; */
+  height: 100%;
+  margin-right: -50px; /* maximum width of scrollbar */
+  padding-right: 50px; /* maximum width of scrollbar */
+  overflow-y: scroll;
+
+}
+.cards img {
+  /* border: 1.5px solid #000;
+  box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); */
+  margin: 10px; 
+  width: 150px;
+}

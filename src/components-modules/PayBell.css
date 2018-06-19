@@ -1,0 +1,27 @@
+/* .goToPayContainer {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.goToPayContainer2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end
+}     */
+/* 
+.bellImg {
+    display: flex;
+    right: 0px;
+    bottom: 0px;
+}
+
+.yellowImg {
+    display: flex;
+    right: 0px;
+    bottom: 0px;
+}     */

@@ -18,7 +18,8 @@ import Nav from '../src/components-modules/Nav'
 import PageTemplate from '../src/components-modules/PageTemplate'
 import Itemblock from '../src/components-modules/Itemblock'
 import Headertext from '../src/components-modules/Headertext'
-
+import FoodtruckGallery from '../src/components-modules/FoodtruckGallery'
+import Shoppingcart from '../src/components-modules/Shoppingcart'
 
 // icon/logo
 import btnBurger from '../src/icon/btn_burger.svg'
@@ -225,6 +226,27 @@ storiesOf('Page', module)
       </div>
     </PageTemplate>
   )
+
+  .add('Page 7', () =>
+  <PageTemplate className="s-bg-white">
+  <Nav full className="s-nav-menu" />
+      <Headertext title="NOM DU SITE" subtitle="CATEGORY NAME"/>
+      <Input
+        icon={btnSearch}
+        iconHeight="1.3"
+        placeholder="Search"
+      />
+    <FoodtruckGallery/>
+  </PageTemplate>
+  )
+
+  .add('QuantitySlide', () =>
+  <PageTemplate className="s-bg-white">
+  <Nav full className="s-nav-menu" />
+    <Shoppingcart/> 
+  </PageTemplate>
+  )
+
   .add('Logout Page', () =>
     <PageTemplate className="s-bg-orange">
       <h1 className=" merci s-mt-1 s-mb-0"> #EtMerci! </h1>
