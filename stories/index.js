@@ -201,7 +201,7 @@ storiesOf('Page', module)
         icon={btnSearch}
         iconHeight="1.3"
         placeholder="Rechercher un spot"
-        // className="s-mt-2"
+  
       />
     <Link text="MES SPOTS" logo={logoHeart} imgHeight="4.5" />
       <div className="s-mt-1 s-d-flex">
@@ -209,6 +209,7 @@ storiesOf('Page', module)
        
       <LogoSpot src="../src/icon/cheesers.png"/>
        
+      <LogoSpot src="../src/icon/munchies.png"/>
       </div>
     </PageTemplate>
   )

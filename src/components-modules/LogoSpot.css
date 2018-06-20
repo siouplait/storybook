@@ -3,9 +3,9 @@ div.spot-thumbnail {
     width: 100vw;
 }
 
-img.img--ftthumbnail {
+img.img-ft-thumbnail {
     border: 1px solid #ddd;
-    padding: 2px;
+    padding: 3px;
     margin: 0;
 }
 
