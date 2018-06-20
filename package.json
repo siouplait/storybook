@@ -29,11 +29,16 @@
     "@storybook/addon-viewport": "^3.4.7",
     "@storybook/react": "^3.4.7",
     "@storybook/storybook-deployer": "^2.3.0",
+    "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1",
+    "eslint-config-react-app": "^2.1.0",
     "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-flowtype": "^2.49.3",
     "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.9.1",
     "eslint-plugin-standard": "^3.1.0",
     "gh-pages": "^1.2.0"
   }

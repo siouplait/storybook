@@ -16,9 +16,9 @@ import Input from '../src/components-modules/Input'
 import Link from '../src/components-modules/Link'
 import Nav from '../src/components-modules/Nav'
 import PageTemplate from '../src/components-modules/PageTemplate'
-import Itemblock from '../src/components-modules/Itemblock'
 import Headertext from '../src/components-modules/Headertext'
 import FoodtruckGallery from '../src/components-modules/FoodtruckGallery'
+import MenuItems from '../src/components-modules/MenuItems'
 import Shoppingcart from '../src/components-modules/Shoppingcart'
 
 // icon/logo
@@ -54,12 +54,12 @@ storiesOf('Button', module)
     <Button icon={btnBack} iconHeight="7" />)
 
   .add('Btn black share', () =>
-    <Button 
-    text="PARTAGER"
-    icon={btnBack}
-    iconHeight = "7"
-    classIcon="s-icon-symetric"
-    className="s-black" />)
+    <Button
+      text="PARTAGER"
+      icon={btnBack}
+      iconHeight = "7"
+      classIcon="s-icon-symetric"
+      className="s-black" />)
 
   .add('Btn search', () =>
     <Button icon={btnSearch} iconHeight="7" />)
@@ -69,7 +69,7 @@ storiesOf('Button', module)
 
   .add('Btn remove', () =>
     <Button icon={btnRemove} iconHeight="7" />)
-  
+
   .add('Btn and logo', () =>
     <Button text="salut" logo={logoMain} logoHeight="25" />)
 
@@ -82,7 +82,7 @@ storiesOf('Input', module)
     <Input
       icon={btnSearch}
       iconHeight="5"
-      placeholder="Standard input" 
+      placeholder="Standard input"
     />)
 
 // LINK stories
@@ -122,9 +122,9 @@ storiesOf('Page', module)
   )
   .add('Page 2', () =>
     <PageTemplate className="s-bg-orange">
-      <img 
+      <img
         className="s-mb-3 s-mt-2"
-        src={logoMain} 
+        src={logoMain}
         alt="logo principal"
         style={{ height: 8 + 'em' }}
       />
@@ -139,11 +139,11 @@ storiesOf('Page', module)
   )
   .add('Page 3', () =>
     <PageTemplate nav="s-nav-noback s-no-title" className="s-bg-orange">
-      <img 
+      <img
         className="s-fixed-t s-mt-1"
         src={logoMain}
         alt="logo"
-        style={{ height: "7em" }}
+        style={{ height: '7em' }}
       />
       <div className="s-block-landscape s-mt-5 s-mb-3" >
         <Button position="s-mt-3" text="Scanner le QR Code" logo={logoQr} logoHeight="15" />
@@ -158,7 +158,7 @@ storiesOf('Page', module)
         className="s-mt-3"
         src={logoNfcn}
         alt="logo QR"
-        style={{ height: "5em" }}
+        style={{ height: '5em' }}
       />
       <p className="s-px-2">
         Posez votre <span className="s-text-bold">téléphone</span> sur les <span className="s-text-bold">jolis ronds connectés</span>,
@@ -168,7 +168,7 @@ storiesOf('Page', module)
         <img
           src={logoMain}
           alt="logo"
-          style={{ height: "4em" }}
+          style={{ height: '4em' }}
         />
         <Button icon={btnBack} iconHeight="4" />
       </div>
@@ -181,70 +181,33 @@ storiesOf('Page', module)
     </PageTemplate>
   )
   .add('Page Menu card', () =>
-    <PageTemplate className="s-bg-white">
-      <Nav full className="s-nav-menu" />
+    <PageTemplate nav className="s-bg-white">
       <Headertext title="NOM DU SITE" subtitle="CATEGORY NAME"/>
       <Input
         icon={btnSearch}
         iconHeight="1.3"
         placeholder="Search"
       />
-
-      <div className="s-mt-1 s-d-flex">
-
-        <Itemblock src="http://via.placeholder.com/150x150">
-          Name item Name item Name item PRIX
-        </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
-          Name item Name item Name item PRIX
-        </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
-          Name item Name item Name item PRIX
-        </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
-          Name item Name item Name item PRIX
-        </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
-          Name item Name item Name item PRIX
-        </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
-          Name item Name item Name item PRIX
-        </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
-          Name item Name item Name item PRIX
-        </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
-          Name item Name item Name item PRIX
-        </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
-          Name item Name item Name item PRIX
-        </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
-          Name item Name item Name item PRIX
-        </Itemblock>
-       
-      </div>
+      <MenuItems items={Array(200).fill()}/>
     </PageTemplate>
   )
 
   .add('Page 7', () =>
-  <PageTemplate className="s-bg-white">
-  <Nav full className="s-nav-menu" />
+    <PageTemplate nav className="s-bg-white">
       <Headertext title="NOM DU SITE" subtitle="CATEGORY NAME"/>
       <Input
         icon={btnSearch}
         iconHeight="1.3"
         placeholder="Search"
       />
-    <FoodtruckGallery/>
-  </PageTemplate>
+      <FoodtruckGallery items={Array(200).fill()}/>
+    </PageTemplate>
   )
 
   .add('QuantitySlide', () =>
-  <PageTemplate className="s-bg-white">
-  <Nav full className="s-nav-menu" />
-    <Shoppingcart/> 
-  </PageTemplate>
+    <PageTemplate nav className="s-bg-white">
+      <Shoppingcart />
+    </PageTemplate>
   )
 
   .add('Logout Page', () =>
@@ -257,12 +220,11 @@ storiesOf('Page', module)
         width="150" />
       <Button className="s-btn s-black s-mt-1" onClick={action('clicked')}>
         PARTAGER <img className="s-icon-symetric" src={btnBack} alt="button share 30 x 30" height="30px"
-        width="30px" />
+          width="30px" />
       </Button>
-      <img style={{ transform: 'rotate(-11deg)'}} src={logoSioup} alt="button burger 140 x 140" className="s-mt-2" height='50' />
+      <img style={{ transform: 'rotate(-11deg)' }} src={logoSioup} alt="button burger 140 x 140" className="s-mt-2" height='50' />
       <p className="s-mt-2 s-ml-05 s-mr-05"> MAIS C'EST NOUS QUI VOUS REMERCIONS </p>
     </PageTemplate>
   )
-
 
 export default Button
