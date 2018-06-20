@@ -18,6 +18,7 @@ import Nav from '../src/components-modules/Nav'
 import PageTemplate from '../src/components-modules/PageTemplate'
 import Itemblock from '../src/components-modules/Itemblock'
 import Headertext from '../src/components-modules/Headertext'
+import LogoSpot from '../src/components-modules/LogoSpot'
 
 
 // icon/logo
@@ -192,6 +193,23 @@ storiesOf('Page', module)
     <PageTemplate nav className="s-bg-white">
       <p>Template test</p>
       <p>test</p>
+    </PageTemplate>
+  )
+  .add('Page Spots', () =>
+    <PageTemplate nav className="s-bg-white">
+      <Input
+        icon={btnSearch}
+        iconHeight="1.3"
+        placeholder="Rechercher un spot"
+        // className="s-mt-2"
+      />
+    <Link text="MES SPOTS" logo={logoHeart} imgHeight="4.5" />
+      <div className="s-mt-1 s-d-flex">
+      <LogoSpot src="../src/icon/munchies.png"/>
+       
+      <LogoSpot src="../src/icon/cheesers.png"/>
+       
+      </div>
     </PageTemplate>
   )
   .add('Page Menu card', () =>
