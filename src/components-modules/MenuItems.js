@@ -1,7 +1,6 @@
 import React from 'react'
 import Itemblock from './Itemblock'
 
-
 const MenuItems = ({ items = [] }) =>
   <div className="s-mt-1 s-d-flex">
     {items.map((item, index) =>
