@@ -151,6 +151,21 @@ storiesOf('Page', module)
       <Link block className="s-fixed-b" text="Commander sans compte" logo={btnSearch} imgHeight="5" />
     </PageTemplate>
   )
+  .add('Page 3.1', () =>
+  <PageTemplate nav className="s-bg-orange">
+    <p className="s-px-2">
+      <span className="s-text-bold">Siouplaît</span> souhaite accéder à votre appareil photo
+    </p>
+    <div className="s-block-landscape s-mt-3" sylte={{position : "bottom"}}>
+      <img
+        src={logoMain}
+        alt="logo"
+        style={{ height: "4em" }}
+      />
+      <Button icon={btnBack} iconHeight="4"/>
+    </div>
+  </PageTemplate>
+)
   .add('Page 4', () =>
     <PageTemplate nav className="s-bg-orange">
       <img
