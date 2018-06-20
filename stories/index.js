@@ -153,16 +153,16 @@ storiesOf('Page', module)
   )
   .add('Page 3.1', () =>
   <PageTemplate nav className="s-bg-orange">
-    <p className="s-px-2">
+    <p className="s-px-2 s-mt-5">
       <span className="s-text-bold">Siouplaît</span> souhaite accéder à votre appareil photo
     </p>
-    <div className="s-block-landscape s-mt-3" sylte={{position : "bottom"}}>
+    <div className="s-block-landscape s-mt-5" sylte={{position : "bottom"}}>
       <img
         src={logoMain}
         alt="logo"
         style={{ height: "4em" }}
       />
-      <Button icon={btnBack} iconHeight="4"/>
+      <Button icon={btnBack} iconHeight="4" className="s-mt-5" />
     </div>
   </PageTemplate>
 )
