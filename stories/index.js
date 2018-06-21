@@ -17,7 +17,7 @@ import Link from '../src/components-modules/Link'
 import Nav from '../src/components-modules/Nav'
 import PageTemplate from '../src/components-modules/PageTemplate'
 import Headertext from '../src/components-modules/Headertext'
-import FoodtruckGallery from '../src/components-modules/FoodtruckGallery'
+import SpotCategory from '../src/components-modules/SpotCategory'
 import MenuItems from '../src/components-modules/MenuItems'
 import Shoppingcart from '../src/components-modules/Shoppingcart'
 
@@ -180,7 +180,20 @@ storiesOf('Page', module)
       <p>test</p>
     </PageTemplate>
   )
-  .add('Page Menu card', () =>
+
+  .add('Page 7 spot category', () =>
+    <PageTemplate nav className="s-bg-white">
+      <Headertext title="NOM DU SITE" subtitle="ADDRESS & OPENING HOURS"/>
+      <Input
+        icon={btnSearch}
+        iconHeight="1.3"
+        placeholder="Search"
+      />
+      <SpotCategory items={Array(20).fill()}/>
+    </PageTemplate>
+  )
+
+  .add('Page 8 Menu card', () =>
     <PageTemplate nav className="s-bg-white">
       <Headertext title="NOM DU SITE" subtitle="CATEGORY NAME"/>
       <Input
@@ -190,19 +203,7 @@ storiesOf('Page', module)
       />
       <MenuItems items={Array(200).fill()}/>
     </PageTemplate>
-  )
-
-  .add('Page 7', () =>
-    <PageTemplate nav className="s-bg-white">
-      <Headertext title="NOM DU SITE" subtitle="CATEGORY NAME"/>
-      <Input
-        icon={btnSearch}
-        iconHeight="1.3"
-        placeholder="Search"
-      />
-      <FoodtruckGallery items={Array(200).fill()}/>
-    </PageTemplate>
-  )
+  )  
 
   .add('QuantitySlide', () =>
     <PageTemplate nav className="s-bg-white">

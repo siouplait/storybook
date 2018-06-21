@@ -125,3 +125,10 @@
   width: 100%;
   justify-content: center;
 }
+
+.s-d-flex-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
