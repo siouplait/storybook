@@ -5,13 +5,13 @@ div.s-block-input-logo {
 
 div.s-block-input-logo button {
     position: absolute;
-    right: 5px;
-    top: 5px;
+    right: 5vw;
+    top: 5vw;
 }
 
 input.s-input {
     height: 1.7em;
-    width: 14em;
+    width: 12em;
     padding: 0 2.5em 0 1em;
     border: 1px solid #000;
     border-radius: 5px;

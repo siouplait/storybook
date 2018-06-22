@@ -201,6 +201,7 @@ storiesOf('Page', module)
         icon={btnSearch}
         iconHeight="1.3"
         placeholder="Rechercher un spot"
+        style={{margin:"4vw"}}
       />
       <Link text="MES SPOTS" logo={logoHeart} imgHeight="4.5" />
        <div className="s-mt-1 s-d-flex">
@@ -208,7 +209,7 @@ storiesOf('Page', module)
         <LogoSpot src="../src/icon/cheesers.png" />
         <LogoSpot src="../src/icon/munchies.png" />
       </div>
-      <Button icon={btnBack} iconHeight="4" class="s-btn-icon" style={{backgroundColor:"#FFB72D", width:"100%"}} />
+      <Button icon={btnBack} iconHeight="5" class="s-btn-icon" style={{backgroundColor:"#FFB72D", width:"100%", alignItem:"center", height:"28vw", paddingTop:"3vw",marginTop:"9vw"}} />
     </PageTemplate>
   )
   .add('Page Menu card', () =>
