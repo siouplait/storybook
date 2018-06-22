@@ -11,6 +11,7 @@ div.s-main-block {
 
 div.s-bg-orange {
   background-color: #FFB72D;
+  height:100%;
 }
 
 div.s-bg-white {
@@ -33,6 +34,7 @@ div.s-box {
   display: flex;
   justify-content: center;
 }
+
 
 span.s-text-bold {
   font-weight: 500;
