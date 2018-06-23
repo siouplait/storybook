@@ -46,30 +46,39 @@ storiesOf('Button', module)
     <Button text="PASSER COMMANDE" className="s-black" />)
 
   .add('Btn burger', () =>
-    <Button icon={btnBurger} iconHeight="10" />)
+    <Button icon={btnBurger} iconHeight="3em" />)
 
   .add('Btn back', () =>
-    <Button icon={btnBack} iconHeight="7" />)
+    <Button icon={btnBack} iconHeight="2.5em" />)
 
   .add('Btn black share', () =>
     <Button 
-    text="PARTAGER"
-    icon={btnBack}
-    iconHeight = "7"
-    classIcon="s-icon-symetric"
-    className="s-black" />)
+      text="PARTAGER"
+      icon={btnBack}
+      iconHeight = "2.5em"
+      classIcon="s-icon-symetric"
+      className="s-black" 
+    />)
+
+  .add('Btn with icon', () =>
+    <Button
+      text="RECHERCHE"
+      icon={btnSearch}
+      iconHeight="2.5em"
+      className="s-black"
+    />)
 
   .add('Btn search', () =>
-    <Button icon={btnSearch} iconHeight="7" />)
+    <Button icon={btnSearch} iconHeight="2em" />)
 
   .add('Btn adding', () =>
-    <Button icon={btnAdding} iconHeight="7"/>)
+    <Button icon={btnAdding} iconHeight="3em"/>)
 
   .add('Btn remove', () =>
-    <Button icon={btnRemove} iconHeight="7" />)
+    <Button icon={btnRemove} iconHeight="3em" />)
   
   .add('Btn and logo', () =>
-    <Button text="salut" logo={logoMain} logoHeight="25" />)
+    <Button text="salut" logo={logoMain} logoHeight="9em" />)
 
 // INPUT stories
 storiesOf('Input', module)
@@ -79,8 +88,9 @@ storiesOf('Input', module)
   .add('Input search', () =>
     <Input
       icon={btnSearch}
-      iconHeight="5"
-      placeholder="Standard input" 
+      width="20em"
+      iconHeight="1.3em"
+      placeholder="Search"
     />)
 
 // LINK stories
@@ -89,10 +99,10 @@ storiesOf('Link', module)
     <Link>Commander sans <br/> compte</Link>)
 
   .add('link highlighted with icon', () =>
-    <Link text="MES SPOTS" logo={logoHeart} imgHeight="4.5"/>)
+    <Link text="MES SPOTS" logo={logoHeart} imgHeight="1.3em"/>)
 
   .add('link highlighted with white block', () =>
-    <Link text="Commander sans compte" block logo={btnSearch} imgHeight="5" />)
+    <Link text="Commander sans compte" block logo={btnSearch} imgHeight="1.5em" />)
 
 // NAVBAR stories
 storiesOf('Nav', module)
@@ -110,27 +120,26 @@ storiesOf('Page', module)
   .add('Page 1', () =>
     <PageTemplate className="s-bg-orange">
       <img
-        className="s-mt-3"
+        className=""
         src={logoMain}
         alt="button burger"
         style={{ height: '12em' }}
       />
-      <Button text="PASSER COMMANDE" position="s-mt-3" className="s-black" />
+      <Button text="PASSER COMMANDE" position="s-mt-4" className="s-black" />
     </PageTemplate>
   )
   .add('Page 2', () =>
     <PageTemplate className="s-bg-orange">
       <img 
-        className="s-mb-3 s-mt-2"
         src={logoMain} 
         alt="logo principal"
         style={{ height: 8 + 'em' }}
       />
-      <div className="s-block-landscape s-mb-4">
-        <Button text="Facebook Connect" position="s-mb-2" className="s-facebook" />
-        <Button text="S'inscrire" position="" />
+      <div className="s-block-landscape s-mt-2">
+        <Button text="Facebook Connect" className="s-facebook" />
+        <Button text="S'inscrire" position="s-mt-1" />
       </div>
-      <Link className="s-fixed-b s-mb-1">
+      <Link className="s-mt-5">
         Commander sans<br/> compte
       </Link>
     </PageTemplate>
@@ -143,17 +152,17 @@ storiesOf('Page', module)
         alt="logo"
         style={{ height: "7em" }}
       />
-      <div className="s-block-landscape s-mt-5 s-mb-3" >
-        <Button position="s-mt-3" text="Scanner le QR Code" logo={logoQr} logoHeight="15" />
-        <Button text="Androïd : NFC" logo={logoNfcn} logoHeight="15" />
+      <div className="s-block-landscape" >
+        <Button position="s-mt-3" text="Scanner le QR Code" logo={logoQr} logoHeight="5em" />
+        <Button text="Androïd : NFC" logo={logoNfcn} logoHeight="5em" />
       </div>
-      <Link block className="s-fixed-b" text="Commander sans compte" logo={btnSearch} imgHeight="5" />
+      <Link block className="s-fixed-b" text="Commander sans compte" logo={btnSearch} imgHeight="2em" />
     </PageTemplate>
   )
   .add('Page 4', () =>
     <PageTemplate nav className="s-bg-orange">
       <img
-        className="s-mt-3"
+        className="s-mt-"
         src={logoNfcn}
         alt="logo QR"
         style={{ height: "5em" }}
@@ -168,7 +177,7 @@ storiesOf('Page', module)
           alt="logo"
           style={{ height: "4em" }}
         />
-        <Button icon={btnBack} iconHeight="4" />
+        <Button icon={btnBack} iconHeight="4em" />
       </div>
     </PageTemplate>
   )
@@ -179,16 +188,18 @@ storiesOf('Page', module)
     </PageTemplate>
   )
   .add('Page Menu card', () =>
-    <PageTemplate className="s-bg-white">
-      <Nav full className="s-nav-menu" />
-      <Headertext title="NOM DU SITE" subtitle="CATEGORY NAME"/>
-      <Input
-        icon={btnSearch}
-        iconHeight="1.3"
-        placeholder="Search"
-      />
+    <PageTemplate nav className="s-bg-white">
+      <div>
+        <Headertext title="NOM DU SITE" subtitle="CATEGORY NAME" />
+        <Input
+          icon={btnSearch}
+          width="17em"
+          iconHeight="1.3em"
+          placeholder="Search"
+        />
+      </div>
 
-      <div className="s-mt-1 s-d-flex">
+      <div className="s-mt-4 s-d-flex">
 
         <Itemblock src="http://via.placeholder.com/150x150">
           Name item Name item Name item PRIX
