@@ -1,17 +1,19 @@
 div.s-thumbnail {
     margin: 0.2em 0.1em;
-    width: 30vw;
+    max-width: 27vw;
+    padding: 0;
+    margin: 5px;
 }
 
 img.s-img-thumbnail {
+    width: 100%;
     border: 1px solid #ddd;
-    padding: 2px;
     margin: 0;
 }
 
 p.s-detail-thumbnail{
+    width: 100%;
     text-align: center;
     border: 1px solid #ddd;
-    padding: 1px;
     margin: 0;
 }
