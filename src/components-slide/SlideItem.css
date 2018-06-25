@@ -31,10 +31,13 @@ div.s-im-block {
 }
 
 @media screen and (orientation: landscape) {
+  .s-block-slide-item {
+    width: 50% !important;
+  }
   .s-com-item {
     display: none;
   }
   .s-item-count {
-    width: 50%;
+    width: 60%;
   }
 }
