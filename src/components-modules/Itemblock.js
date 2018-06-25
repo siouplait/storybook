@@ -1,11 +1,9 @@
 import React from 'react'
 import './Itemblock.css'
 
-import img1 from '../img/LogoPoulet.png'
-
-const Itemblock = ({ children }) =>
+const Itemblock = ({ children, imgHeight, src }) =>
   <div className="s-thumbnail">
-    <img className="s-img-thumbnail" src={img1} alt="item image"/>
+    <img className="s-img-thumbnail" src={src} style={{ width: imgHeight }} alt="item image"/>
     <p className="s-detail-thumbnail">{children}</p>
   </div>
 

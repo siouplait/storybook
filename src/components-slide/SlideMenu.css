@@ -1,0 +1,44 @@
+div.s-block-slide-menu {
+  left: 0;
+  color: white;
+  position: fixed;
+  z-index: 100;
+  height: 100%;
+  background-color: #04346D;
+  text-align: center;
+  border: 1px solid silver;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul.s-link-menu {
+  padding: 0;
+}
+
+ul.s-link-menu li {
+  list-style: none;
+  margin: 1.5em 0;
+}
+
+ul.s-link-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+span.s-menu-year {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+@media screen and (orientation: landscape) {
+  .s-menu-landscape {
+    display: none;
+  }
+  .s-block-slide-menu {
+    text-align: left !important;
+    justify-content: center;
+    width: 50% !important;
+  }
+}

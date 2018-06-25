@@ -16,6 +16,8 @@ import PageTemplate from '../src/components-modules/PageTemplate'
 import Itemblock from '../src/components-modules/Itemblock'
 import Itemspots from '../src/components-modules/Itemspots'
 import Headertext from '../src/components-modules/Headertext'
+import SlideMenu from '../src/components-slide/SlideMenu'
+import SlideItem from '../src/components-slide/SlideItem'
 // icon/logo
 import btnBurger from '../src/icon/btn_burger.svg'
 import btnBack from '../src/icon/btn_back.svg'
@@ -26,6 +28,9 @@ import logoMain from '../src/icon/logo_main2.png'
 import logoQr from '../src/icon/logo_qr.png'
 import logoNfcn from '../src/icon/logo_nfcn.png'
 import logoHeart from '../src/icon/logo_heart.svg'
+import logoTitle from '../src/icon/logo_title.png'
+import logoChiken from '../src/img/LogoPoulet.png'
+import imgSpot from '../src/img/painter_poster03.png'
 // welcome
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />)
 // BUTTON stories
@@ -155,6 +160,24 @@ storiesOf('Page', module)
       <Link block className="s-fixed-b" text="Commander sans compte" logo={btnSearch} imgHeight="2em" />
     </PageTemplate>
   )
+
+  .add('Page confirm photo', () =>
+    <PageTemplate center nav="s-nav-noback" className="s-bg-orange">
+      <p className="s-px-8 s-mb-10">
+        <span className="s-text-bold">Siouplaît</span> souhaite accéder à votre appareil photo
+    </p>
+
+    <img
+      className="s-mb-20"
+      src={logoMain}
+      alt="logo"
+      style={{ height: "7em" }}
+    />
+    <Button icon={btnBack} className="s-fixed-b s-mb-5" iconHeight="4em" />
+
+    </PageTemplate>
+  )
+
   .add('Page 4', () =>
     <PageTemplate nav center className="s-bg-orange">
       <div className="s-mb-16">
@@ -180,7 +203,7 @@ storiesOf('Page', module)
   )
 
   .add('Page spots search', () =>
-    <PageTemplate nav="s-nav-noback" className="s-bg-white">
+    <PageTemplate nav="s-nav-noback-portrait" className="s-bg-white">
 
       <div full className="s-mt-2">
         <Input
@@ -194,11 +217,11 @@ storiesOf('Page', module)
       </div>
 
       <div full className="s-d-flex s-mt-3 s-pb-20">
-        <Itemspots src="http://via.placeholder.com/150x150"/>
-        <Itemspots src="http://via.placeholder.com/150x150" />
-        <Itemspots src="http://via.placeholder.com/150x150" />
-        <Itemspots src="http://via.placeholder.com/150x150" />
-        <Itemspots src="http://via.placeholder.com/150x150" />
+        <Itemspots src={imgSpot}/>
+        <Itemspots src={imgSpot} />
+        <Itemspots src={imgSpot} />
+        <Itemspots src={imgSpot} />
+        <Itemspots src={imgSpot} />
       </div>
 
       <Button className="s-landscape-hidden" block icon={btnBack} iconHeight="3em" />
@@ -218,35 +241,65 @@ storiesOf('Page', module)
       </div>
 
       <div full className="s-d-flex">
-        <Itemblock src="http://via.placeholder.com/150x150">
+        <Itemblock src={logoChiken}>
           Name item Name item Name item PRIX
         </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
+        <Itemblock src={logoChiken}>
           Name item Name item Name item PRIX
         </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
+        <Itemblock src={logoChiken}>
           Name item Name item Name item PRIX
         </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
+        <Itemblock src={logoChiken}>
           Name item Name item Name item PRIX
         </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
+        <Itemblock src={logoChiken}>
           Name item Name item Name item PRIX
         </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
+        <Itemblock src={logoChiken}>
           Name item Name item Name item PRIX
         </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
+        <Itemblock src={logoChiken}>
           Name item Name item Name item PRIX
         </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
+        <Itemblock src={logoChiken}>
           Name item Name item Name item PRIX
         </Itemblock>
-        <Itemblock src="http://via.placeholder.com/150x150">
+        <Itemblock src={logoChiken}>
           Name item Name item Name item PRIX
         </Itemblock>
       </div>
     </PageTemplate>
+  )
+
+  .add('Logout Page', () =>
+    <PageTemplate center className="s-bg-orange">
+      <div className="s-fixed-t">
+        <h1 className=""> #EtMerci! </h1>
+        <p className=""> Le "Name of the place" prépare votre commande.
+        <br />Vous recevrez une notification quand celle-ci sera prête.
+      </p>
+      </div>
+      <img className="s-mt-20" src={logoMain} alt="logo main" style={{ height: "25vh" }} />
+      <Button
+        position="s-mt-5"
+        text="PARTAGER"
+        icon={btnBack}
+        iconHeight="2.5em"
+        classIcon="s-icon-symetric"
+        className="s-black"
+      />
+      <img className="s-landscape-hidden s-mt-5" style={{ transform: 'rotate(-11deg)' }} src={logoTitle} alt="logo title" />
+      <p className="s-mt-4"> MAIS C'EST NOUS QUI VOUS REMERCIONS </p>
+    </PageTemplate>
+  )
+
+  .add('blue slide', () =>
+    <SlideMenu />
+  )
+
+  .add('item slide', () =>
+    <SlideItem dataItem="text text item item PRIX" src={logoChiken}/>
   )
 
 export default Button
