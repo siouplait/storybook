@@ -1,9 +1,8 @@
 import React from 'react'
-import './Itemspots.css'
 
 const Itemspots = ({ src }) =>
-  <div className="s-block-spots">
-    <img src={src} alt="" className="s-img"/>
+  <div>
+    <img style={{ width: '80vw' }} src={src} alt="spot"/>
   </div>
 
   export default Itemspots

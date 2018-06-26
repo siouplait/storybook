@@ -3,8 +3,9 @@ import React from 'react'
 import Button from '../components-modules/Button'
 import Link from '../components-modules/Link'
 
-import logoHeart from "../icon/logo_heart.svg"
-import logoThumb from "../icon/like_thumb.png"
+import logoHeart from '../icon/logo_heart.svg'
+import logoThumb from '../icon/like_thumb.png'
+import downArrow from '../icon/Down_arrow_icon.svg'
 
 import './SlideMenu.css'
 
@@ -28,9 +29,13 @@ const SlideMenu = () =>
       </ul>
     </div>
 
-    <div className="s-menu-landscape s-fixed-b s-mb-2">
-      <p>Pas Siouplait dans ce spot ? <br /> on arrive !</p>
-      <Button icon={logoThumb} iconHeight="3em" />
+    <div className="s-menu-landscape s-fixed-b">
+      <p className="s-question-input" >Pas Siouplait dans ce spot ? <br /> on arrive !</p>
+      <div className="s-form-menu">
+        <input className="s-input-menu" type="text" placeholder="Nom du Spot ..." />
+        <Button classIcon="s-form-menu-btn" icon={downArrow} iconHeight="2em" />
+      </div>
+      <Button icon={logoThumb} iconHeight="2em" />
       <p><span className="s-menu-year" >©</span> Siouplaît - <span className="s-menu-year">2018</span></p>
     </div>
     

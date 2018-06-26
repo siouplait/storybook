@@ -179,7 +179,7 @@ storiesOf('Page', module)
   )
 
   .add('Page 4', () =>
-    <PageTemplate nav center className="s-bg-orange">
+    <PageTemplate nav="s-nav-noback" center className="s-bg-orange">
       <div className="s-mb-16">
         <img
           className="s-mt-"

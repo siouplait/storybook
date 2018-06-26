@@ -30,14 +30,23 @@ div.s-im-block {
   width: 90%;
 }
 
+.s-slide-item-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
 @media screen and (orientation: landscape) {
   .s-block-slide-item {
-    width: 50% !important;
+    flex-direction: row !important;
+    justify-content: space-between;
   }
-  .s-com-item {
-    display: none;
+  .s-slide-item-form {
+    margin: 0 10px 0 0;
   }
-  .s-item-count {
-    width: 60%;
+  .s-thumbnail-slide {
+    border: none;
+    margin-left: 10px;
+    width: 40%;
   }
 }

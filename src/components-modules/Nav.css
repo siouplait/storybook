@@ -17,11 +17,11 @@ div.s-nav-menu > h1 {
   font-family: "Ma Super Fonte";
 }
 
-div.s-nav-menu > div:last-child > button {
+.s-nav-btn-burger {
   margin-right: 0.5em;
 }
 
-div.s-nav-noback > div:last-child > button, div.s-nav-noback-portrait > div:last-child > button {
+.s-nav-noback .s-nav-btn-back {
   visibility: hidden;
 }
 
@@ -37,9 +37,6 @@ div.s-no-title > h1 {
   div.s-nav-menu > h1 {
     font-size: 5vw;
   }
-  div.s-nav-noback-portrait > div:last-child > button {
-  visibility: visible;
-}
 }
 
 @media screen and (orientation: portrait) {

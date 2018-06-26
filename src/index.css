@@ -4,16 +4,16 @@ body {
 }
 
 h1 {
-  font-size: 5vh;
+  font-size: 2em;
   font-weight: 500;
 }
 
 h2 {
-  font-size: 4vh;
+  font-size: 1.3em;
   font-weight: 400;
 }
 
 h5 {
-  font-size: 3vh;
+  font-size: 0.9em;
   font-weight: 300;
 }
