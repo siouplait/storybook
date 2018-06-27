@@ -18,6 +18,10 @@ import Itemspots from '../src/components-modules/Itemspots'
 import Headertext from '../src/components-modules/Headertext'
 import SlideMenu from '../src/components-slide/SlideMenu'
 import SlideItem from '../src/components-slide/SlideItem'
+import SpotCategory from '../src/components-modules/SpotCategory'
+import ListOrder from '../src/components-modules/ListOrder'
+import TotalOrder from '../src/components-modules/TotalOrder'
+import Tip from '../src/components-modules/Tip'
 // icon/logo
 import btnBurger from '../src/icon/btn_burger.svg'
 import btnBack from '../src/icon/btn_back.svg'
@@ -161,23 +165,6 @@ storiesOf('Page', module)
     </PageTemplate>
   )
 
-  .add('Page confirm photo', () =>
-    <PageTemplate center nav="s-nav-noback" className="s-bg-orange">
-      <p className="s-px-8 s-mb-10">
-        <span className="s-text-bold">Siouplaît</span> souhaite accéder à votre appareil photo
-    </p>
-
-    <img
-      className="s-mb-20"
-      src={logoMain}
-      alt="logo"
-      style={{ height: "7em" }}
-    />
-    <Button icon={btnBack} className="s-fixed-b s-mb-5" iconHeight="4em" />
-
-    </PageTemplate>
-  )
-
   .add('Page 4', () =>
     <PageTemplate nav="s-nav-noback" center className="s-bg-orange">
       <div className="s-mb-16">
@@ -203,7 +190,7 @@ storiesOf('Page', module)
   )
 
   .add('Page spots search', () =>
-    <PageTemplate nav="s-nav-noback-portrait" className="s-bg-white">
+    <PageTemplate nav className="s-bg-white">
 
       <div full className="s-mt-2">
         <Input
@@ -216,15 +203,13 @@ storiesOf('Page', module)
         <Link className="s-mt-1" text="MES SPOTS" logo={logoHeart} imgHeight="1.3em" />
       </div>
 
-      <div full className="s-d-flex s-mt-3 s-pb-20">
+      <div full className="s-d-flex s-mt-3 s-pb-10">
         <Itemspots src={imgSpot}/>
         <Itemspots src={imgSpot} />
         <Itemspots src={imgSpot} />
         <Itemspots src={imgSpot} />
         <Itemspots src={imgSpot} />
       </div>
-
-      <Button className="s-landscape-hidden" block icon={btnBack} iconHeight="3em" />
     </PageTemplate>
   )
 
@@ -299,7 +284,57 @@ storiesOf('Page', module)
   )
 
   .add('item slide', () =>
-    <SlideItem dataItem="text text item item PRIX" src={logoChiken}/>
+    <SlideItem dataItem="Name item" price="10.00 euros" src={logoChiken}/>
+  )
+
+  .add('Page 7 spot category', () =>
+    <PageTemplate nav className="s-bg-white">
+      <div full className="s-d-flex1">
+        <Headertext title="NOM DU SITE" subtitle="ADDRESS & OPENING HOURS" />
+        <Input
+          className="s-mt-1"
+          icon={btnSearch}
+          width="17em"
+          iconHeight="1.3em"
+          placeholder="Search"
+        />
+      </div>
+
+      <div full className="s-d-flex">
+        <SpotCategory 
+          items={['PETIT DEJ', 'APERO', 'BOISSONS']} 
+          src={['../src/img/petitdej.png', '../src/img/apero.png', '../src/img/boisson.png']} 
+        />
+      </div>
+    </PageTemplate>
+  )
+
+  .add('Page commande', () =>
+    <PageTemplate nav className="s-bg-white">
+      <div full className="s-d-flex1">
+        <Headertext title="VOTRE COMMANDE" subtitle="JJ.MM.AA  HH:MM" />
+      </div>
+
+      <div center>
+        <ListOrder 
+        list={[
+          {qte: 2, name: 'Burger', price: 8.10, id: 1},
+          {qte: 1, name: 'coca', price: 1.50, id: 12},
+          {qte: 1, name: 'Salade', price: 4.40, id: 100},
+          {qte: 2, name: 'Mousse au chocolat', price: 7.40, id: 8}
+        ]} />
+        <TotalOrder list={[
+          { qte: 2, name: 'Burger', price: 8.10, id: 1 },
+          { qte: 1, name: 'coca', price: 1.50, id: 12 },
+          { qte: 1, name: 'Salade', price: 4.40, id: 100 },
+          { qte: 2, name: 'Mousse au chocolat', price: 7.40, id: 8 }
+        ]} />
+        <Tip />
+        <div className="s-pb-7">
+          <Button text="PAYER" className="s-black" />
+        </div>
+      </div>
+    </PageTemplate>
   )
 
 export default Button

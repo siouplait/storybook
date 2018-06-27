@@ -19,8 +19,8 @@ div.s-block-input-logo button {
 
 input.s-input {
     height: 1.7em;
-    width: inherit;
-    padding: 0 2.5em 0 1em;
+    width: 80%;
+    padding: 0 2.5vw 0 1vw;
     text-align: center;
     border: none;
     margin: 2px;
