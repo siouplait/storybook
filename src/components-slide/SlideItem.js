@@ -25,10 +25,7 @@ const SlideItem = ({ src, dataItem, price }) =>
     <div className="s-slide-item-form">
       <div className="s-com-item s-mt-6">
         <h4 style={{ margin: '0' }}>Commentaire :</h4>
-        <textarea name="" id="" cols="25" rows="4">
-          Sauce ? allergie ? autre ...
-          (vous avez 140 caractères)
-      </textarea>
+        <textarea name="" id="" cols="25" rows="4" placeholder=" Sauce ? allergie ? autre ... (vous avez 140 caractères)"></textarea>
       </div>
 
       <div className="s-item-count s-mt-7">
